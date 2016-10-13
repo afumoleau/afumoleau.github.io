@@ -1,1 +1,52 @@
-"Hello World" 
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+    <body class="grey lighten-3">
+        <div id="app" class="container">
+            <header>
+                <div class="row">
+                    <div class="col m4 center-align">
+                        <img class="responsive-img circle z-depth-2" style="border : 4px solid white;" src="https://www.gravatar.com/avatar/39e7e6249dc0fdc1ab53a701de02cfbd?s=200" alt="">
+                    </div>
+                    <div class="col m8">
+                        <h1>Alix FUMOLEAU</h1>
+                        <div class="card bio">
+                            <div class="card-content">
+                                Hi ! I'm a developer working in Bordeaux, France. I love to create video games and to experiment with VR !
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!--<h2 class="center">2016</h2>-->
+            <!--<h2 class="center">2015</h2>-->
+            <!--<h2 class="center">2014</h2>-->
+            <!--<h2 class="center">2013</h2>-->
+            <!--<h2 class="center">2012</h2>-->
+
+            <div class="card" v-for="project in projects">
+                <div class="card-content">
+                    <div class="card-title">{{ project.name }}</div>
+                    <p>{{ project.description }}</p>
+                    <img class="responsive-img" src="{{ project.image }}" alt="">
+                    <!--<img class="responsive-img" src="https://i.ytimg.com/vi/4_F7wLrd_QY/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=pO54omqcinogbVYVk5-bAIoBZhU" alt="">-->
+                </div>
+                <div class="card-action">
+                    <a :href="project.sources" class="blue-text" v-if="project.sources"><i class="material-icons">code</i> GitHub</a>
+                    <a :href="project.download" class="blue-text" v-if="project.download"><i class="material-icons">file_download</i> Download</a>
+                    <div class="right">
+                        <div class="chip" v-for="tag in project.tags">{{tag}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+        <script src="https://unpkg.com/vue@next/dist/vue.js"></script>
+        <script type="text/javascript" src="/index.js"></script>
+    </body>
+</html>

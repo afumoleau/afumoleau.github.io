@@ -1,0 +1,14 @@
+{
+  "name": "afumoleau.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alix Fumoleau <alix.fumoleau@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "materialize-css": "^0.97.7"
+  }
+}
