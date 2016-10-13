@@ -33,7 +33,7 @@
                 <div class="card-content">
                     <div class="card-title">{{ project.name }}</div>
                     <p>{{ project.description }}</p>
-                    <img class="responsive-img" src="{{ project.image }}" alt="">
+                    <img class="responsive-img" :src="project.image" alt="">
                     <!--<img class="responsive-img" src="https://i.ytimg.com/vi/4_F7wLrd_QY/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=pO54omqcinogbVYVk5-bAIoBZhU" alt="">-->
                 </div>
                 <div class="card-action">
@@ -46,7 +46,7 @@
             </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-        <script src="https://unpkg.com/vue@next/dist/vue.js"></script>
+        <script src="https://unpkg.com/vue@next/dist/vue.min.js"></script>
         <script type="text/javascript" src="/index.js"></script>
     </body>
 </html>
