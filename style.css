@@ -12,7 +12,16 @@ header {
     font-size: 1.25em;
     text-align : justify
 }
-.card-action i {
-    position: relative;
-    top: 5px;
+.project img {
+    border : 2px solid white;
+    max-width : 250px;
+    max-height : 150px;
+}
+.horizontal-layout {
+    display : flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+.horizontal-layout * {
+    flex-grow: 1;
 }
